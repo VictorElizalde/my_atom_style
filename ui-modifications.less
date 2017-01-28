@@ -1,0 +1,146 @@
+@import "colors";
+
+.dark-space-modify-ui {
+
+    .tree-view {
+        &::before {
+            background: @blue-shirt;
+        }
+
+        .header.list-item,
+        .list-item {
+            color: lighten(@hull-red-markings, 5%);
+        }
+    }
+
+    .tab-bar {
+        .tab {
+            &::before {
+                background: @blue-shirt;
+            }
+
+            .title {
+                color: @grey;
+            }
+
+            &.active .title {
+                color: lighten(@hull-grey, 10%);
+            }
+
+            .close-icon {
+                color: @blue-shirt !important;
+            }
+        }
+    }
+
+    atom-text-editor::shadow {
+        .line-number {
+            padding-left: 18px !important;
+        }
+    }
+
+    .status-added,
+    .status-added > .list-item {
+        color: @green-shirt !important;
+    }
+
+    .status-modified,
+    .status-modified > .list-item {
+        color: @blue-shirt !important;
+    }
+
+    .status-removed {
+        color: @red-shirt !important;
+    }
+
+    .status-renamed {
+        color: lighten(@green-shirt, 10%) !important;
+    }
+
+    .status-ignored,
+    .status-ignored > .list-item {
+        color: lighten(@dark-grey, 5%) !important;
+    }
+
+    .status-bar {
+        color: lighten(@dark-grey, 5%);
+
+        a,
+        div {
+            color: lighten(@dark-grey, 5%);
+        }
+
+        .deprecation-cop-status {
+            color: lighten(@green-shirt, 10%);
+        }
+
+        .package-updates-status-view {
+            color: @green-shirt;
+        }
+    }
+
+    .settings-view {
+        input[type="checkbox"]:checked {
+            background-color: @blue-shirt;
+        }
+
+        button.selected,
+        .btn.btn-default.selected,
+        .btn.btn-info {
+            background: @blue-shirt;
+
+            &:hover {
+                background: lighten(@blue-shirt, 10%);
+            }
+        }
+    }
+
+    .btn.btn-primary {
+        background: @blue-shirt;
+    }
+
+    a.link {
+        color: @green-shirt;
+
+        &:hover {
+            color: @green-shirt;
+        }
+    }
+
+    atom-text-editor[mini].is-focused {
+        border-color: @blue-shirt;
+        box-shadow: 0 0 0 1px @blue-shirt;
+    }
+
+    .tooltip {
+        @tooltips: @green-shirt;
+
+        &.top .tooltip-arrow {
+          border-top-color: @tooltips;
+        }
+        &.top-left .tooltip-arrow {
+          border-top-color: @tooltips;
+        }
+        &.top-right .tooltip-arrow {
+          border-top-color: @tooltips;
+        }
+        &.right .tooltip-arrow {
+          border-right-color: @tooltips;
+        }
+        &.left .tooltip-arrow {
+          border-left-color: @tooltips;
+        }
+        &.bottom .tooltip-arrow {
+          border-bottom-color: @tooltips;
+        }
+        &.bottom-left .tooltip-arrow {
+          border-bottom-color: @tooltips;
+        }
+        &.bottom-right .tooltip-arrow {
+          border-bottom-color: @tooltips;
+        }
+        .tooltip-inner {
+            background: @tooltips;
+        }
+    }
+}
